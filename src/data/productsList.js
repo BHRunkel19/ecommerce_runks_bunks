@@ -16,7 +16,7 @@ const productList = [
     name: "Seed & Feed",
     price: "$14.99",
     size: "20 lb / container",
-    details: "Its like steroids, but for grass",
+    details: "Its like steroids, but for grass and without the involuntary rage",
     imageUrl: Lawn
 },
   {
@@ -32,7 +32,7 @@ const productList = [
     name: "Bunker Rakes",
     price: "$29.99",
     size: "60in long",
-    details: "Glide through the bunker like a fine-tooth comb with these revolutionary rakes",
+    details: "Glide through the bunker like a fine-tooth comb!",
     imageUrl: Rake
 
 }

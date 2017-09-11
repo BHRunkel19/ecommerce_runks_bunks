@@ -45,12 +45,13 @@ h1 {
   font-size: 100px;
   padding-left: 150px;
   position: absolute;
-  margin-top: 25px;
+  margin: 0px;
   z-index: 1;
   color: green;
   text-shadow: 5px 5px black;
   text-decoration: underline;
   font-style: italic;
+  width: inherit;
 }
 
 h3{
@@ -93,14 +94,15 @@ a:visited{
 }
 
 .golf_ball{
-  width: 50px;
-  height: 50px;
-  background: white;
+  width: 75px;
+  height: 75px;
+  background-image: url('./golf_ball.jpg');
+  background-size: cover;
   border-radius: 50px;
   margin-top: 50px;
   margin-left: 50px;
   cursor: pointer;
-  box-shadow: 5px 5px black;
+  box-shadow: 8px 8px black;
   position: absolute;
   z-index: 2;
 }
@@ -114,7 +116,7 @@ a:visited{
   color: green;
   width: 100px;
   z-index: 1;
-  margin-left: -20px;
+  padding-top: 50px;
 }
 
 .dropdown-content a{
@@ -135,22 +137,26 @@ a:visited{
   margin-top: 50px;
 }
 
+.cart_view{
+  height: 50px;
+  width: 50px;
+  background: white;
+}
+
 .prod_list_container{
-  height: 800px;
-  width: 1260px;
+  height: 600px;
+  width: 1280px;
   padding: 25px 0px;
   display: flex;
   justify-content: center;
-  background-image: url("./the-golf-courses-of-palmetto.jpg");
+  background-image: url("./sunset_golf.jpg");
   background-size: cover;
 }
 
 .prods{
-  background: silver;
   border-radius: 20px;
-  width: 100%;
   width: 75%;
-  margin: 5px auto;
+  margin: 0 auto;
   display: flex;
   justify-content: space-around;
 }
@@ -163,6 +169,7 @@ a:visited{
 
 .prod_box{
   margin-top: 150px;
+  z-index: 1;
 }
 
 .list-item{
@@ -179,12 +186,65 @@ a:visited{
   display: flex;
   justify-content: center;
   flex-flow: column nowrap;
-  padding-bottom: 25px;
+  padding-bottom: 10px;
 }
 
-.desc{
-  text-align: center;
+.prod_name{
+  font-size: 20px;
+  padding: 10px;
+  background: white;
+  border-radius: 20px;
+}
+
+.prod_desc{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  margin-top: 25px;
+}
+
+
+.desc_display{
+  height: 120px;
   width: 200px;
+  border-radius: 20px;
+  font-size: 16px;
+  background-color: white;
+  color: green;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  margin: 5px;
+}
+
+
+.prod-details{
+  display: none;
+  position: absolute;
+  background-color: green;
+  color: white;
+  font-size: 14px;
+  min-width: 160px;
+  height: 100px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.serv_desc{
+  color: white;
+  padding: 5px;
+  font-size: 16px;
+}
+
+.prod_desc:hover .prod-details{
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  border-radius: 20px;
+  padding: 10px;
+  cursor: pointer;
+  height: 200px;
 }
 
 a.nav-link-prod{
@@ -195,18 +255,21 @@ a.nav-link-prod{
   color: white;
 }
 
+a.nav-link-prod:hover{
+  text-decoration: none;
+  cursor: pointer;
+}
+
 a.nav-link-prod:visited{
   color: green;
 }
 
-span{
-  padding-bottom: 25px;
-}
-
 .prod_img{
-  width: 200px;
-  height: 200px;
-  border-radius: 10px;
+  width: 150px;
+  height: 150px;
+  border-radius: 25px;
+  padding: 10px;
+  margin: 10px auto;
 }
 
 .product_view_box{
@@ -222,4 +285,27 @@ span{
   width: 400px;
   text-align: center;
   margin: 0 auto;
+}
+
+footer{
+  background: green;
+  width: 1260px;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+@media (max-width: 760px){
+  .prods{
+    border-radius: 20px;
+    width: 75%;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: column nowrap;
+  }
+  .prod_list_container{
+    height: 100%;
+  }
+  .products_title{
+    margin: 0px;
+  }
 }
