@@ -9,9 +9,12 @@ export default class App extends Component {
         <div className="main_wrapper">
           <h1>Runk's Bunks</h1>
           <h3>The Brand in the Sand</h3>
+          </div>
+          
+          <div className="fullscreen">
           <video loop muted autoPlay className="as_bunker" src={Bunker} />
           </div>
-      </div>
+          </div>
     );
   }
 }
